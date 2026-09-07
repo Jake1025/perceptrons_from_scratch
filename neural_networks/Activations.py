@@ -7,6 +7,12 @@ class Activation(Enum):
     TANH = "tanh"
     LINEAR = "linear"
 
+    def weight_limit(self, input_size: int, output_size: int) -> float:
+        """Uniform initialization: He for ReLU, Xavier for other activations."""
+        if self is Activation.RELU:
+            return math.sqrt(6.0 / input_size)
+        return math.sqrt(6.0 / (input_size + output_size))
+
     def apply(self, value: float) -> float:
         if self is Activation.SIGMOID:
             if value >= 0:
