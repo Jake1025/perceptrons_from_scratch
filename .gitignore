@@ -27,6 +27,9 @@ htmlcov/
 # Jupyter temporary files
 .ipynb_checkpoints/
 
+# Local datasets
+/neural_networks/data/
+
 # Environment and local configuration
 .env
 .env.*
