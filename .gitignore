@@ -45,3 +45,5 @@ Thumbs.db
 .pyright/
 .vscode/*.log
 .vscode/settings.json
+
+data/*
